@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.mainColor{
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bannerText{
+  background-color: black;
+  opacity: .8;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.bannerText h1{
+  font-size: 66px;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bannerText hr{
+  border-top: 5px dotted white;
+  width: 50%;
+  margin: auto;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.page-enter{
+  opacity: 0;
+  /* transform: translateX(-100%) */
 }
+
+.page-enter-active{
+  opacity: 1;
+  /* transform: translateX(0%); */
+  transition: 300ms ease-out;
+
+}
+
+.page-exit{
+  opacity: 1;
+}
+
+.page-exit-active{
+  opacity: 0;
+  transition: 300ms ease-in;
+}
+
+
