@@ -48,4 +48,16 @@
   transition: 300ms ease-in;
 }
 
+textarea{
+  resize: none;
+}
 
+
+.formLabel{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.formError{
+  color: rgb(87, 8, 8);
+}
