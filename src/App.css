@@ -61,3 +61,21 @@ textarea{
 .formError{
   color: rgb(87, 8, 8);
 }
+
+.resumeMainBanner{
+  background-color: blueviolet;
+  width: 70%;
+}
+
+.centerText{
+  display: 'flex';
+  align-items: center;
+  justify-content: center;
+}
+
+.resumeBanner{
+  background-color: blueviolet;
+  color: white;
+}
+
+
