@@ -18,6 +18,7 @@ export default class MainComponent extends React.Component {
         return (
             <div className="demo-big-content">
                 <Layout className="mainColor">
+                    <>
                     <Header className="mainColor" title="Placido's Porfolio" scroll>
                         <Navigation>
                             <Link to="/resume">Resume</Link>
@@ -26,6 +27,7 @@ export default class MainComponent extends React.Component {
                             <Link to="/contact">Contact</Link>
                         </Navigation>
                     </Header>
+                    </>
                     <Drawer style={{ backgroundImage: "linear-gradient(to right,  #203A43, #0F2027)" }} className="mainColor" title="Portfolio"> <Link to="/">home</Link>
                         <Navigation>
                             <Link to="/resume">Resume</Link>
@@ -39,7 +41,7 @@ export default class MainComponent extends React.Component {
                         <div className="page-content mt-4">
                         <Route render={({ location }) => (
                             <TransitionGroup>
-                                <CSSTransition key={location.key} classNames="page" timeout={300}>
+                                <CSSTransition key={location.key} classNames="page" timeout={200}>
                                     <Switch>
                                         <Route exact path="/" component={Home} />
                                         <Route exact path="/about" component={About} />
