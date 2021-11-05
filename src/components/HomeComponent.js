@@ -21,49 +21,51 @@ export default class Home extends React.Component {
                             <h1 className="d-flex justify-content-center">Placido Hoff</h1>
                             <h3 className="d-flex justify-content-center text-white">Web Developer</h3>
                             <hr />
-                            <div className="mt-1 d-flex justify-content-center">
-                                <div className="p-3">
-                                    <DiReact
-                                        color="white"
-                                        fontSize="5.5em"
-                                    />
-                                </div>
-                                <div className="p-3">
-                                    <DiJavascript1
-                                        color="white"
-                                        fontSize="5.5em"
-                                    />
-                                </div>
+                            <div className="container">
+                                <div className="mt-1 row d-flex justify-content-center">
+                                    <div className="col p-3">
+                                        <DiReact
+                                            color="white"
+                                            fontSize="5.5em"
+                                        />
+                                    </div>
+                                    <div className="col p-3">
+                                        <DiJavascript1
+                                            color="white"
+                                            fontSize="5.5em"
+                                        />
+                                    </div>
 
-                                <div className="p-3">
-                                    <DiBootstrap
-                                        color="white"
-                                        fontSize="5.5em"
-                                    />
-                                </div>
-                                <div className="p-3">
-                                    <DiNodejs
-                                        color="white"
-                                        fontSize="5.5em"
-                                    />
-                                </div>
-                                <div className="p-3">
-                                    <DiMongodb
-                                        color="white"
-                                        fontSize="5.5em"
-                                    />
-                                </div>
-                                <div className="p-3">
-                                    <SiFirebase
-                                        color="white"
-                                        fontSize="5.5em"
-                                    />
-                                </div>
-                                <div className="p-3">
-                                    <DiGit
-                                        color="white"
-                                        fontSize="5.5em"
-                                    />
+                                    <div className="col p-3">
+                                        <DiBootstrap
+                                            color="white"
+                                            fontSize="5.5em"
+                                        />
+                                    </div>
+                                    <div className="col p-3">
+                                        <DiNodejs
+                                            color="white"
+                                            fontSize="5.5em"
+                                        />
+                                    </div>
+                                    <div className="col p-3">
+                                        <DiMongodb
+                                            color="white"
+                                            fontSize="5.5em"
+                                        />
+                                    </div>
+                                    <div className="col p-3">
+                                        <SiFirebase
+                                            color="white"
+                                            fontSize="5.5em"
+                                        />
+                                    </div>
+                                    <div className="col p-3">
+                                        <DiGit
+                                            color="white"
+                                            fontSize="5.5em"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>

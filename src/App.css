@@ -78,4 +78,14 @@ textarea{
   color: white;
 }
 
+.navItem:hover{
+  background-color: rgb(228, 224, 217);
+  color: black;
+  
+}
+
+.navItem:hover span{
+  color: black;
+}
+
 

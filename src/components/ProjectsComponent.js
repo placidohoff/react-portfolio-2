@@ -15,17 +15,20 @@ function ShowProjects() {
                             <Fade in>
                                 <div className="d-flex border border-3 border-dark mt-3 align-items-center" style={{ height: '21rem' }}>
                                     <div className="">
-                                        <Card style={{ width: '22rem', height: '20rem' }}>
-                                            <img variant="top" style={{ height: '20rem' }} src={project.image} />
+                                    <a href={`${project.link}`} target="blank">
+                                            <Card style={{ width: '22rem', height: '20rem' }}>
+                                                <img variant="top" style={{ height: '20rem' }} src={project.image} />
 
-                                        </Card>
+                                            </Card>
+                                        </a>
                                     </div>
 
                                     <div className="m-4" style={{ height: '20rem' }}>
 
                                         <div className="h2 text-white"><u>{project.name}</u></div>
                                         <div className="mt-5 text-white h5 col">
-                                            {project.description}
+                                            <div className="d-none d-md-block">{project.description}</div>
+                                            <a href={`${project.link}`} target="blank"><div className="mt-4">See it here</div></a>
                                         </div>
 
 

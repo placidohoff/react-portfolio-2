@@ -16,8 +16,9 @@ function RenderAbout() {
 export default class About extends React.Component {
     render() {
         return (
-            <div style={{overflowY: 'scroll'}} className="container bannerText p-4">
-                <h1><RenderAbout /></h1>
+            <div className="container bannerText p-4">
+                <h2 className="text-white">About Me</h2>
+                <div><RenderAbout /></div>
             </div>
         )
     }

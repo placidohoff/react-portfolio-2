@@ -21,21 +21,21 @@ export default class MainComponent extends React.Component {
                     <>
                         <Header className="mainColor" title="Placido's Porfolio" scroll sticky>
                             <Navigation>
-                                <Link to="/">Home</Link>
-                                <Link to="/resume">Resume</Link>
-                                <Link to="/about">About Me</Link>
-                                <Link to="/projects">Projects</Link>
-                                <Link to="/contact">Contact</Link>
+                                <Link className="navItem" to="/"><span>Home</span></Link>
+                                <Link className="navItem" to="/projects"><span>Projects</span></Link>
+                                <Link className="navItem" to="/resume"><span>Resume</span></Link>
+                                <Link className="navItem" to="/about"><span>About Me</span></Link>
+                                <Link className="navItem" to="/contact"><span>Contact</span></Link>
                             </Navigation>
                         </Header>
                     </>
-                    <Drawer style={{ backgroundImage: "linear-gradient(to right,  #203A43, #0F2027)" }} className="mainColor" title="Portfolio"> 
+                    <Drawer style={{ backgroundImage: "linear-gradient(to right,  #203A43, #0F2027)" }} className="mainColor" title="Portfolio">
                         <Navigation>
-                            <Link to="/">Home</Link>
-                            <Link to="/resume">Resume</Link>
-                            <Link to="/about">About Me</Link>
-                            <Link to="/projects">Projects</Link>
-                            <Link to="/contact">Contact</Link>
+                            <Link className="navItem" to="/"><span>Home</span></Link>
+                            <Link className="navItem" to="/projects"><span>Projects</span></Link>
+                            <Link className="navItem" to="/resume"><span>Resume</span></Link>
+                            <Link className="navItem" to="/about"><span>About Me</span></Link>
+                            <Link className="navItem" to="/contact"><span>Contact</span></Link>
 
                         </Navigation>
                     </Drawer>

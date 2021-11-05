@@ -91,7 +91,7 @@ export default class Contact extends React.Component {
                             </div>
                         </div>
                         <div className="row form-group">
-                            <div className="col">
+                            <div className="col-6">
                                 <input
                                     className="form-control"
                                     type="text" value={this.state.name}
@@ -118,7 +118,7 @@ export default class Contact extends React.Component {
                             </div>
                         </div>
                         <div className="row form-group">
-                            <div className="col">
+                            <div className="col-6">
                                 <input
                                     className="form-control"
                                     type="text"
@@ -149,7 +149,7 @@ export default class Contact extends React.Component {
                             </div>
                         </div>
                         <div className="row form-group">
-                            <div className="col">
+                            <div className="col-6">
                                 {/* <input type="text" value={this.state.email} onChange={e => this.setState({email: e.target.value})} /> */}
                                 <textarea 
                                     className="form-control" 
@@ -169,7 +169,7 @@ export default class Contact extends React.Component {
                     <br />
                     <div>
                         <div className="row form-group">
-                            <div className="col d-flex justify-content-center">
+                            <div className="col-6 d-flex justify-content-center">
                                 <button
                                     type="submit"
                                     className="form-control"
