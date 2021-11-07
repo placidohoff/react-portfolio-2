@@ -29,13 +29,13 @@ export default class MainComponent extends React.Component {
                             </Navigation>
                         </Header>
                     </>
-                    <Drawer style={{ backgroundImage: "linear-gradient(to right,  #203A43, #0F2027)" }} className="mainColor" title="Portfolio">
+                    <Drawer style={{ backgroundImage: "linear-gradient(to right,  #203A43, #0F2027)" }} className="mainColor text-white" title="Portfolio">
                         <Navigation>
-                            <Link className="navItem" to="/"><span>Home</span></Link>
-                            <Link className="navItem" to="/projects"><span>Projects</span></Link>
-                            <Link className="navItem" to="/resume"><span>Resume</span></Link>
-                            <Link className="navItem" to="/about"><span>About Me</span></Link>
-                            <Link className="navItem" to="/contact"><span>Contact</span></Link>
+                            <Link className="navItem text-white" to="/"><span>Home</span></Link>
+                            <Link className="navItem text-white" to="/projects"><span>Projects</span></Link>
+                            <Link className="navItem text-white" to="/resume"><span>Resume</span></Link>
+                            <Link className="navItem text-white" to="/about"><span>About Me</span></Link>
+                            <Link className="navItem text-white" to="/contact"><span>Contact</span></Link>
 
                         </Navigation>
                     </Drawer>
