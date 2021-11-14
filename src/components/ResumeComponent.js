@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
-import { Document, Page, pdfjs } from 'react-pdf'
-// import resume from '../assets/resume.pdf'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { RESUME } from '../data/RESUME'
 
 const resume = RESUME
 const bannerText = `d-flex align-items-center justify-content-center text-white`
-const projectHeading = `d-flex justify-content-center text-white`
+const projectHeading = `d-flex justify-content-center text-white h1`
 
 function RenderContactInfo() {
     return (
@@ -13,14 +12,16 @@ function RenderContactInfo() {
             {
                 resume.contact.map(info => (
                     <>
-                        <span>
-                            {info.name}
-                        </span>
-                        <br />
-                        <span className="m-2">
-                            {info.value}
-                        </span>
-                        <br />
+                        <div>
+                            <u>{info.name}</u>
+                        </div>
+
+                        <div className="m-2 mb-2">
+                            {
+                                info.isClick ? <a target='_blank' href={`http://${info.value}`}>{info.value}</a> : info.value
+                            }
+
+                        </div>
                     </>
                 ))
             }
@@ -49,8 +50,22 @@ function RenderWorkHistoryList() {
             {
                 resume.recentWorkHistory.map(job => (
                     <>
-                        <div className="h2 mt-4">{`${job.name} (${job.title}) ${job.dates}`}</div>
-                        {/* <div className="h6">{project.description}</div> */}
+                        <div className="h2 mt-4 "><u>{`${job.name}`}</u></div>
+                        <div className="h5 d-flex justify-content-between">
+                            <div className="pr-5">
+                                {`${job.title}`}
+                            </div>
+                            <div className="">
+                                <u>{`(${job.dates})`}</u>
+                            </div>
+                        </div>
+                        <ul>
+                            {job.roles.map(role => {
+                                return (
+                                    <li>{role}</li>
+                                )
+                            })}
+                        </ul>
                     </>
                 ))
             }
@@ -59,17 +74,6 @@ function RenderWorkHistoryList() {
 }
 
 export default class Resume extends React.Component {
-    componentDidMount() {
-        pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-    }
-
-    // render(){
-    //     return(
-    //         <Document file={resume}>
-    //             <Page pageNumber={1} />
-    //         </Document>
-    //     )
-    // }
     render() {
         return (
             <div className="container">
@@ -91,7 +95,7 @@ export default class Resume extends React.Component {
                     </div>
                     <div className="col-4">
                         <div className="resumeBanner">
-                            <span className={`${bannerText}`}>Contact</span>
+                            <span className={`${bannerText} h4`}>Contact</span>
                         </div>
                         <div className="border border-3 border-dark text-white p-3">
                             <RenderContactInfo />
@@ -103,34 +107,41 @@ export default class Resume extends React.Component {
                     <div className="col-4">
                         <div className="row" style={{ width: '90%' }}>
                             <div className="col resumeBanner">
-                                <span className={`${bannerText}`}>Skill Set</span>
+                                <span className={`${bannerText} h4`}>Skill Set</span>
                             </div>
                             <div className="border border-3 border-dark text-white p-3">
                                 {
                                     resume.skillSet.map(skill => (
-                                        <div>{skill}</div>
+                                        <div className="d-flex justify-content-center h5">{skill}</div>
                                     ))
                                 }
                             </div>
                         </div>
                         <div className="row mt-3" style={{ width: '90%' }}>
                             <div className="col resumeBanner">
-                                <span className={`${bannerText} d-flex justify-content-center`}>Military Experience</span>
+                                <span className={`${bannerText} h4 d-flex justify-content-center`}>Military Experience</span>
                             </div>
                             <div className="border border-3 border-dark text-white p-3">
 
-                                <br />
-                                {
-                                    resume.militaryExperience.description
-                                }
-                                <br />
-                                {
-                                    resume.militaryExperience.date
-                                }
-                                <br />
-                                Rank: &nbsp;{
-                                    resume.militaryExperience.rank
-                                }
+                                <div className="mb-3">
+                                    {
+                                        resume.militaryExperience.description
+                                    }
+                                </div>
+
+                                <div className="row">
+                                    <div className="mb-3 col-lg-6">
+                                        {
+                                            resume.militaryExperience.date
+                                        }
+                                    </div>
+                                    <div className="col-lg-6">
+
+                                        Rank: &nbsp;{
+                                            resume.militaryExperience.rank
+                                        }
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -3,27 +3,33 @@ export const RESUME = {
     contact: [
         {
             name: 'Online Portfolio:',
-            value: 'placido.hoff.github.io'
+            value: 'placido.hoff.github.io',
+            isClick: true
         },
         {
             name: 'Linked In:',
-            value: 'linkedin.com/in/placidohoff'
+            value: 'linkedin.com/in/placidohoff',
+            isClick: true
         },
         {
             name: 'Github:',
-            value: 'github.com/placidohoff'
+            value: 'github.com/placidohoff',
+            isClick: true
         },
         {
             name: 'Email:',
-            value: 'placido.hoff@gmail.com'
+            value: 'placido.hoff@gmail.com',
+            isClick: true
         },
         {
             name: 'Phone:',
-            value: '(401)405-6301'
+            value: '(401)405-6301',
+            isClick: false
         },
         {
             name: 'Address:',
-            value: '84 Wesleyan Ave, Providence, RI, 02907'
+            value: '84 Wesleyan Ave, Providence, RI, 02907',
+            isClick: false
         },
 
     ],
@@ -37,9 +43,9 @@ export const RESUME = {
         'PostgreSQL',
         'Mongo DB',
         'C#',
-        'Bootstrap CSS',
+        'Bootstrap',
         'Node.js',
-        'Agile Methodology',
+        'Agile',
         'Git'
     ],
     Projects: [

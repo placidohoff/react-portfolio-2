@@ -78,7 +78,7 @@ export default class Contact extends React.Component {
                                     </div>
                                 </div>
                                 <div className="row form-group">
-                                    <div className="col-10">
+                                    <div className="col-12">
                                         <input
                                             className="form-control"
                                             type="text" value={this.state.name}
@@ -105,7 +105,7 @@ export default class Contact extends React.Component {
                                     </div>
                                 </div>
                                 <div className="row form-group">
-                                    <div className="col-10">
+                                    <div className="col-12">
                                         <input
                                             className="form-control"
                                             type="text"
