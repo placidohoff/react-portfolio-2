@@ -16,7 +16,7 @@ export default class Home extends React.Component {
                                 src={avatar}
                             />
                         </div>
-                        <div className="bannerText mt-5 d-flex justify-content-center">
+                        <div className="bannerText mt-5 justify-content-center">
 
                             <h1 className="d-flex justify-content-center">Placido Hoff</h1>
                             <h3 className="d-flex justify-content-center text-white">Web Developer</h3>

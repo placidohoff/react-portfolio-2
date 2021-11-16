@@ -76,7 +76,7 @@ function RenderWorkHistoryList() {
 export default class Resume extends React.Component {
     render() {
         return (
-            <div className="container">
+            <div className="container resume">
                 <div className="row">
                     <div className="col-8">
                         <div className="resumeMainBanner">

@@ -73,6 +73,10 @@ textarea{
   justify-content: center;
 }
 
+.resume{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .resumeBanner{
   background-color: blueviolet;
   color: white;

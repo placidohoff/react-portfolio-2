@@ -58,6 +58,22 @@ export default class Contact extends React.Component {
 
         this.setState({ ...this.state, errors: { name: isNameEmpty, email: isEmailEmpty, comment: isCommentEmpty } })
 
+        //MAKE CUSTOM MODAL: https://morioh.com/p/9db0499fa3b8
+        if (!isNameEmpty && !isEmailEmpty && !isCommentEmpty) {
+            alert("Thank you for your feedback!")
+            this.setState({
+                name: '',
+                email: '',
+                comment: '',
+                emailTouched: false,
+                errors: {
+                    name: false,
+                    email: false,
+                    emailInvalid: false,
+                    comment: false
+                }
+            })
+        }
 
 
         console.log(this.state)
@@ -74,7 +90,7 @@ export default class Contact extends React.Component {
                             <div>
                                 <div className="row form-group">
                                     <div className="col">
-                                        <label className="formLabel">Name:</label>
+                                        <label className="formLabel h4">Name:</label>
                                     </div>
                                 </div>
                                 <div className="row form-group">
@@ -87,13 +103,8 @@ export default class Contact extends React.Component {
                                     </div>
                                 </div>
                                 {
-                                    this.isError('name') &&
-                                    <FormError message="Error" />
-
-                                }
-                                {
                                     this.state.errors.name &&
-                                    <FormError message="Empty" />
+                                    <FormError message="Your name cannot be left empty" />
                                 }
                             </div>
 
@@ -101,7 +112,7 @@ export default class Contact extends React.Component {
                             <div>
                                 <div className="row form-group">
                                     <div className="col">
-                                        <label className="formLabel">Email:</label>
+                                        <label className="formLabel h4">Email:</label>
                                     </div>
                                 </div>
                                 <div className="row form-group">
@@ -123,7 +134,7 @@ export default class Contact extends React.Component {
                                 }
                                 {
                                     this.state.errors.email &&
-                                    <FormError message="empty" />
+                                    <FormError message="Your email cannot be left empty" />
                                 }
                             </div>
 
@@ -132,11 +143,11 @@ export default class Contact extends React.Component {
                             <div>
                                 <div className="row form-group">
                                     <div className="col">
-                                        <label className="formLabel">Comment:</label>
+                                        <label className="formLabel h4">Comment:</label>
                                     </div>
                                 </div>
                                 <div className="row form-group">
-                                    <div className="col-10">
+                                    <div className="col-12">
                                         {/* <input type="text" value={this.state.email} onChange={e => this.setState({email: e.target.value})} /> */}
                                         <textarea
                                             className="form-control"
@@ -149,14 +160,14 @@ export default class Contact extends React.Component {
                                     </div>
                                     {
                                         this.state.errors.comment &&
-                                        <FormError message="empty" />
+                                        <FormError message="You must provide a comment" />
                                     }
                                 </div>
                             </div>
                             <br />
                             <div>
                                 <div className="row form-group">
-                                    <div className="col-10 d-flex justify-content-center">
+                                    <div className="col-12 d-flex justify-content-center">
                                         <button
                                             type="submit"
                                             className="form-control"
@@ -174,37 +185,37 @@ export default class Contact extends React.Component {
                     <div className=" ml-5 mt-5  justify-content-center col-12 col-md-6">
                         <div className="row d-flex text-white justify-content-center">
                             <div className="col-10 ml-4 d-flex justify-content-center">
-                                <MdOutlineEmail 
-                                className="justify-self-center ml-4"
+                                <MdOutlineEmail
+                                    className="justify-self-center ml-4"
                                     color="white"
                                     fontSize="5.5em"
                                 />
 
-                                
+
                                 <h6 className="mt-4 m-4">placido.hoff@gmail.com</h6>
                             </div>
                         </div>
                         <div className="row d-flex text-white justify-content-center mt-5">
                             <div className="col-10  d-flex justify-content-center">
                                 <FaPhone
-                                className="justify-content-center"
+                                    className="justify-content-center"
                                     color="white"
                                     fontSize="5.5em"
                                 />
 
-                                
-                                <h6 className="mt-4 m-4">(405)401-6301</h6>
+
+                                <h6 className="mt-4 m-4">(401)405-6301</h6>
                             </div>
                         </div>
                         <div className="row d-flex text-white justify-content-center mt-5">
                             <div className="col-10 ml-3 d-flex justify-content-center">
                                 <GoLocation
-                                className="justify-content-center"
+                                    className="justify-content-center"
                                     color="white"
                                     fontSize="5.5em"
                                 />
 
-                                
+
                                 <h6 className="mt-4">Providence,RI 02907</h6>
                             </div>
                         </div>
