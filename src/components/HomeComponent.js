@@ -12,7 +12,7 @@ export default class Home extends React.Component {
                     <div className="col">
                         <div className="d-flex justify-content-center">
                             <img
-                                className="img-responsive rounded-circle"
+                                className="img-fluid rounded-circle"
                                 src={avatar}
                             />
                         </div>
