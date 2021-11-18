@@ -2,6 +2,7 @@ import React from 'react'
 import { PROJECTS } from '../data/PROJECTS'
 import { Card, CardImg, CardText, CardBody, CardTitle, Button } from 'reactstrap';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components'
+import { Link } from 'react-router-dom'
 
 const projects = PROJECTS
 
@@ -35,22 +36,26 @@ function ShowProjects() {
                                     </div>
 
                                 </div> */}
+
+
                                 <div className="card mb-3 d-flex justify-content-between">
-                                    <div className="row d-flex justify-content-between">
-                                        <div className="col-4">
-                                            <img variant="top" className="img-fluid" style={{}} src={project.image} />
+                                    <a style={{ color: 'black', textDecoration: 'none' }} href={`${project.link}`} target="blank">
+                                        <div className="row d-flex justify-content-between">
+                                            <div className="col-4">
+                                                <img variant="top" className="img-fluid" style={{}} src={project.image} />
 
-                                        </div>
-                                        <div className="col-8">
-                                            <div className="card-body">
-                                                <div className="card-title">{project.name}</div>
-                                                <div className="card-text">{project.description}</div>
                                             </div>
+                                            <div className="col-8">
+                                                <div className="card-body">
+                                                    <div className="card-title">{project.name}</div>
+                                                    <div className="card-text">{project.description}</div>
+                                                </div>
 
+                                            </div>
                                         </div>
-                                    </div>
-
+                                    </a>
                                 </div>
+
                             </Fade>
 
                         )
